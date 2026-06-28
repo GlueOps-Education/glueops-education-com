@@ -1,7 +1,7 @@
 # Multi-stage Dockerfile for React Vite application
 
 # Stage 1: Build the application
-FROM node:20-alpine AS build
+FROM node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 AS build
 
 # Set working directory
 WORKDIR /app
@@ -19,7 +19,7 @@ COPY . .
 RUN bun run build
 
 # Stage 2: Serve with nginx
-FROM nginx:alpine AS production
+FROM nginx:alpine@sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa AS production
 
 # Copy custom nginx configuration
 COPY --from=build /app/dist /usr/share/nginx/html
