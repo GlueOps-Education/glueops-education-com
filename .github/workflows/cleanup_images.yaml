@@ -14,7 +14,7 @@ jobs:
       - name: Cleanup old images
         uses: dataaxiom/ghcr-cleanup-action@d52806a0dc70b430571a37da1fde39733ffd640f # v1.2.2
         with:
-          package: backup-tools
+          package: glueops-education-com
           exclude-tags: latest,main,v*
           keep-n-tagged: 5
           delete-untagged: true
