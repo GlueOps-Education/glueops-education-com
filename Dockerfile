@@ -1,7 +1,7 @@
 # Multi-stage Dockerfile for React Vite application
 
 # Stage 1: Build the application
-FROM node:24-alpine@sha256:a0b9bf06e4e6193cf7a0f58816cc935ff8c2a908f81e6f1a95432d679c54fbfd AS build
+FROM node:24-alpine@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53 AS build
 
 # Set working directory
 WORKDIR /app
