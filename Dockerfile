@@ -19,7 +19,7 @@ COPY . .
 RUN bun run build
 
 # Stage 2: Serve with nginx
-FROM nginx:alpine@sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa AS production
+FROM nginx:alpine@sha256:7fc0fb4af7bf006aeb31aea88069976060f8f0a0a86b667126742cc17f4e31ae AS production
 
 # Copy custom nginx configuration
 COPY --from=build /app/dist /usr/share/nginx/html
